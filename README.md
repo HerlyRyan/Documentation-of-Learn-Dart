@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+This repo is documentation of learning Dart programming language to prepare me make Flutter project freelance
