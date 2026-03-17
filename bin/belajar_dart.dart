@@ -2,7 +2,7 @@
 import 'dart:io';
 
 // function that return double data type
-double converter(){
+double converter() {
   stdout.write('Masukkan suhu Fahrenheit: ');
   double fahrenheit = double.parse(stdin.readLineSync()!);
   var celcius = (fahrenheit - 32) * 5 / 9;
@@ -17,6 +17,22 @@ void greeting(String name, int bornYear) {
 
 // funtion with null safety parameter and optional parameter
 void greetNewUser([String? name, int? age, bool isVerified = false]) {}
+
+// Learn control flow
+// If else
+String calculateScore(num score) {
+  if (score > 90) {
+    return 'A';
+  } else if (score > 80) {
+    return 'B';
+  } else if (score > 70) {
+    return 'C';
+  } else if (score > 60) {
+    return 'D';
+  } else {
+    return 'E';
+  }
+}
 
 // function main not return anything
 void main(List<String> arguments) {
@@ -37,7 +53,7 @@ void main(List<String> arguments) {
   // x = 7
   // var firstName = 'Herly' // can change data type
   // firstName = 7 // causing error
-  
+
   // Receive user input
   // stdout.write('Name : ');
   // String name = stdin.readLineSync()!;
@@ -59,4 +75,47 @@ void main(List<String> arguments) {
   // Learn functions
   // print(converter());
   // greeting('Herly Riyanto Hidayat', 2002);
+
+  // Learn control flow
+  // If else
+  // print(calculateScore(90));
+  // switch case
+  // final firstNumber = 13;
+  // final secondNumber = 18;
+  // final operator = "+";
+
+  // switch (operator) {
+  //   case '+':
+  //     print(
+  //       '$firstNumber $operator $secondNumber = ${firstNumber + secondNumber}',
+  //     );
+  //     break;
+  //   case '-':
+  //     print(
+  //       '$firstNumber $operator $secondNumber = ${firstNumber - secondNumber}',
+  //     );
+  //     break;
+  //   case '*':
+  //     print(
+  //       '$firstNumber $operator $secondNumber = ${firstNumber * secondNumber}',
+  //     );
+  //     break;
+  //   case '/':
+  //     print(
+  //       '$firstNumber $operator $secondNumber = ${firstNumber / secondNumber}',
+  //     );
+  //     break;
+  //   default:
+  //     print('Operator tidak ditemukan');
+  // }
+  // for loop
+  // for (int i = 1; i <= 10; i++) {
+  //   print('*' * i);
+  // }
+  // while and do while
+  // var i = 10;
+  // while (i >= 1) {
+  //   print('*' * i);
+  //   i--;
+  // }
 }
