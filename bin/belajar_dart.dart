@@ -1,5 +1,6 @@
 // import 'package:belajar_dart/belajar_dart.dart' as belajar_dart;
 import 'dart:io';
+import 'cat.dart';
 
 // function that return double data type
 double converter() {
@@ -118,4 +119,24 @@ void main(List<String> arguments) {
   //   print('*' * i);
   //   i--;
   // }
+
+  // Collection
+  // List
+  // var dynamicList = [1, 'hello']; // dynamic data type list
+  // List<String> students = ['Herly', 'Yanto'];
+  // students.add('Riyan');
+  // students.forEach((s) => print('Hai $s'));
+  // set, like List but is for make unique value
+  // Map
+  // var studentsGrade = {
+  //   'Herly': 90,
+  //   'Riyan': 80
+  // };
+  // print(studentsGrade['Herly']);
+
+  var cat = Cat('kitty', 1, 20, 'White');
+  cat.eat();
+  cat.name = 'Kitty';
+  cat.printWeight();
+  print(cat.furColor);
 }
