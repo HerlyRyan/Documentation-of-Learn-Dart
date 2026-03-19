@@ -35,8 +35,25 @@ String calculateScore(num score) {
   }
 }
 
+Future<String> getOrder() {
+  var menus = ['Coffee Boba', 'Coffee Matcha'];
+  for (var i = 0; i < menus.length; i++) {
+    print('$i. ${menus[i]}');
+  }
+
+  stdout.write('Pilih menu: ');
+  int choice = int.parse(stdin.readLineSync()!);
+
+  return Future.delayed(Duration(seconds: 3), () {
+    if (choice >= menus.length) {
+      throw Exception('Menu tidak bisa dipilih');
+    }
+    return menus[choice];
+  });
+}
+
 // function main not return anything
-void main(List<String> arguments) {
+void main(List<String> arguments) async {
   // Learn Variables
   // var nama = 'Herly Riyanto Hidayat';
   // var age = 23;
@@ -134,9 +151,44 @@ void main(List<String> arguments) {
   // };
   // print(studentsGrade['Herly']);
 
-  var cat = Cat('kitty', 1, 20, 'White');
-  cat.eat();
-  cat.name = 'Kitty';
-  cat.printWeight();
-  print(cat.furColor);
+  // var cat = Cat('kitty', 1, 20, 'White');
+  // cat.eat();
+  // cat.name = 'Kitty';
+  // cat.printWeight();
+  // print(cat.furColor);
+
+  // Anonymous Function
+  // var sum = (int firstNumber, int secondNumber){
+  //   return firstNumber + secondNumber;
+  // };
+
+  // print(sum(20, 20));
+  // Async Await
+  // getOrder().then((value) => {print('Your order is: $value')}).catchError((
+  //   error,
+  // ) {
+  //   print('Sorry: $error');
+  //   return 'Error';
+  // }).whenComplete(() => print('Thank you'));
+  // print('Getting your order');
+  // try {
+  //   var order = await getOrder();
+  //   print('You order: $order');
+  // } catch (e) {
+  //   print('Sorry. $e');
+  // } finally {
+  //   print('Thank you');
+  // }
+
+  print(product(10, 7));
+
+  if (11 * 2 + 1 < 23 && 11 % 2 == 1) {
+    print('x');
+  } else {
+    print('y');
+  }
+}
+
+num product(int first, double second) {
+  return first + second;
 }
